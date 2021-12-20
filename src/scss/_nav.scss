@@ -1,0 +1,102 @@
+.nav {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+}
+.nav--author-name {
+    margin: 0.5rem;
+    h1 {
+        color: $dark-blue;
+        font-size: 1.5rem;
+    }
+}
+.nav--flex {
+    display: none;
+    width: 100%;
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    li {
+        font-size: 0.825rem;
+        text-align: center;
+    }
+
+    a {
+        color: $accent-purp;
+        display: block;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        &:hover {
+            color: hsl(0, 0%, 80%);
+        }
+    }
+    .contact {
+        cursor: pointer;
+    }
+
+    &.active {
+        display: flex;
+        a#mobile-top-link {
+            margin-top: 2.5rem;
+        }
+    }
+}
+.nav--socials-flex {
+    display: none;
+    i {
+        color: $accent-purp;
+        font-size: 1rem;
+        padding: 0 0.325rem;
+        cursor: pointer;
+        &:hover {
+            color: hsl(0, 0%, 80%);
+        }
+    }
+}
+.toggle-button {
+    position: absolute;
+    top: 3.1rem;
+    right: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+    .bar {
+        height: 3px;
+        width: 100%;
+        background: $dark-blue;
+        border-radius: 10px;
+    }
+}
+
+@include breakpoint(small) {
+    nav.nav {
+        flex-flow: column;
+        align-items: center;
+    }
+    h1.name {
+        font-size: 2.5rem;
+    }
+    button.hamburger {
+        display: none;
+    }
+    div.nav--socials-flex {
+        display: flex;
+    }
+    div.nav--flex {
+        display: flex;
+    }
+    div.nav--flex > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+@include breakpoint(tablet) {
+}

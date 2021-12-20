@@ -1,0 +1,52 @@
+.footer {
+    text-align: center;
+}
+
+.footer--links-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 1.5rem;
+    ul {
+        display: flex;
+    }
+    li {
+        font-size: 0.825rem;
+    }
+    a {
+        color: $accent-purp;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        display: block;
+        &:hover {
+            color: hsl(0, 0%, 60%);
+        }
+    }
+}
+
+.footer--socials-flex {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 3rem;
+    i {
+        color: $accent-purp;
+        font-size: 2.25rem;
+        padding: 0 0.5rem;
+        padding: 0 1rem;
+        cursor: pointer;
+        &:hover {
+            color: hsl(0, 0%, 60%);
+        }
+    }
+}
+.footer--created-note {
+    font-size: $sm-f;
+    color: $dark-blue;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}

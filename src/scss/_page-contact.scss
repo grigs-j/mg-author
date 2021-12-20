@@ -1,0 +1,37 @@
+main.contact--main {
+    color: $dark-blue;
+    padding: 4rem 0 0 0;
+    text-align: center;
+}
+.title {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+.subtext {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact--main-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form > input {
+    min-width: 280px;
+    border: none;
+    border-bottom: 1px solid $dark-blue;
+    outline: none;
+    line-height: 1.4;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.footer--page {
+    margin-top: 9rem;
+}

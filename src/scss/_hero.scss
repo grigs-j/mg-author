@@ -1,0 +1,44 @@
+.hero {
+    margin-bottom: 3rem;
+}
+.hero--order-button {
+    color: $accent-purp;
+    margin-bottom: 0.5rem;
+    &:hover {
+        background: linear-gradient(120deg, #fff, $purp-gradient);
+    }
+}
+
+.hero--main-text {
+    color: $dark-blue;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    span {
+        color: $accent-purp;
+    }
+}
+
+.hero--img-flex {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+.hero--img-flex > a > img {
+    display: block;
+    width: 100%;
+    max-height: 900px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@include breakpoint(small) {
+    h1.hero--release-text {
+        font-size: 1rem;
+    }
+    a.hero--order-button {
+        margin-bottom: 1rem;
+    }
+}
+@include breakpoint(tablet) {
+}

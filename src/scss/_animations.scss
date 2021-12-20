@@ -1,0 +1,205 @@
+.nav--flex.active {
+    animation: drop-in 1000ms forwards;
+}
+[drop1] {
+    animation: drop-in 500ms forwards;
+}
+[drop2] {
+    animation: drop-in 750ms forwards;
+}
+[drop3] {
+    animation: drop-in 1250ms forwards;
+}
+[drop4] {
+    animation: drop-in 1750ms forwards;
+}
+
+.hero--img-flex {
+    animation: fade-in-drop 500ms ease-in;
+}
+
+.hamburger {
+    position: absolute;
+    right: 2.5rem;
+    top: 3rem;
+    display: block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    color: $dark-blue;
+    background-color: transparent;
+    border: 0;
+    overflow: visible;
+    width: 28px;
+}
+.hamburger:hover {
+    opacity: 0.7;
+}
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: $dark-blue;
+}
+
+.hamburger-box {
+    width: 28px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 28px;
+    height: 4px;
+    background-color: $dark-blue;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.hamburger-inner::before {
+    top: -10px;
+}
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger--spring .hamburger-inner {
+    top: 2px;
+    transition: background-color 0s 0.13s linear;
+}
+.hamburger--spring .hamburger-inner::before {
+    top: 10px;
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spring .hamburger-inner::after {
+    top: 20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spring.is-active .hamburger-inner {
+    transition-delay: 0.22s;
+    background-color: transparent !important;
+}
+.hamburger--spring.is-active .hamburger-inner::before {
+    top: 0;
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--spring.is-active .hamburger-inner::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+
+.cta-link-hero {
+    animation: slow-fade 850ms ease-in;
+}
+.hero--main-text {
+    animation: slow-fade 1200ms ease-in;
+}
+.name {
+    animation: scale-bigger 650ms ease-in;
+}
+.nav--socials-flex {
+    animation: slow-fade 400ms ease-in;
+}
+
+@keyframes scale-bigger {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: scale(1);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slow-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    90% {
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes drop-in {
+    0% {
+        opacity: 0;
+        transform: rotate(25deg);
+        transform-origin: top right;
+        transform: translateY(-20px);
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+        transform: translateY(0px);
+    }
+}
+@keyframes fade-in-drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    80% {
+        transform: scale(1.01);
+    }
+    98% {
+        transform: translateY(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,36 @@
+.cta {
+    text-align: center;
+    margin-bottom: 5rem;
+
+    &--main-text {
+        position: relative;
+        font-size: 2.5rem;
+        color: $dark-blue;
+        padding-bottom: 1rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 23px;
+            left: 45%;
+            width: 10%;
+            height: 1px;
+            background: $light-blue;
+        }
+    }
+
+    &--links {
+        text-decoration: underline;
+        li {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: black;
+            font-weight: 700;
+            font-size: 1.25rem;
+            &:hover {
+                color: #777;
+            }
+        }
+    }
+}

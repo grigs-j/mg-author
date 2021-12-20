@@ -1,0 +1,102 @@
+.other-books {
+    text-align: center;
+    height: 450px;
+    width: 100%;
+    margin-bottom: 6rem;
+}
+.other-books--main-text {
+    color: $dark-blue;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    position: relative;
+}
+.slide {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.slide > a > img {
+    display: block;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.slide[data-active] {
+    opacity: 1;
+}
+
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(200%);
+    color: $dark-blue;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+.carousel-button:hover,
+.carousel-button:focus {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+.carousel-button.prev {
+    left: 0.5rem;
+}
+.carousel-button.next {
+    right: 0.5rem;
+}
+
+@include breakpoint(small) {
+    .slide > a > img {
+        display: block;
+        height: 500px;
+        width: 380px;
+    }
+    li.slide {
+        top: 16rem;
+    }
+    .carousel-button.prev {
+        left: 5.5rem;
+    }
+    .carousel-button.next {
+        right: 5.5rem;
+    }
+}
+@include breakpoint(desktop) {
+    .carousel-button.prev {
+        left: 9.5rem;
+    }
+    .carousel-button.next {
+        right: 9.5rem;
+    }
+}
+@include breakpoint(xlarge) {
+    .carousel-button.prev {
+        left: 20rem;
+    }
+    .carousel-button.next {
+        right: 20rem;
+    }
+}
+@include breakpoint(full) {
+    .carousel-button.prev {
+        left: 30rem;
+    }
+    .carousel-button.next {
+        right: 30rem;
+    }
+}

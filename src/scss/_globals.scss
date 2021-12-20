@@ -1,0 +1,198 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    font-family: $accent-text;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    @include breakpoint(desktop) {
+        width: 70%;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+li,
+ul {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    font-family: $accent-text;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+//global a link styled-buttons
+.button {
+    font-family: $accent-text;
+    color: $dark-blue;
+    margin: 0 auto;
+    align-items: center;
+    background: #fff;
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.825rem;
+    cursor: pointer;
+    border: 1px solid rgb(237, 239, 247);
+    margin-bottom: 1.5rem;
+}
+
+//global button styles
+.modal-button {
+    font-family: $accent-text;
+    color: $accent-purp;
+    background: #fff;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid $light-blue;
+    outline: none;
+}
+
+.fa-envelope {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.contact-button {
+    cursor: pointer;
+}
+//modal
+//modal window & contact form
+// .modal {
+//     color: $dark-blue;
+//     display: none;
+//     position: fixed;
+//     z-index: 10;
+//     padding-top: 1200px;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     overflow: auto;
+//     background-color: rgba(0, 0, 0, 0.4);
+
+//     &-content {
+//         background-color: #fefefe;
+//         position: absolute;
+//         z-index: 9;
+//         top: 40%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         padding: 10rem 8rem;
+//         border: 1px solid #888;
+//         width: 90%;
+//         max-height: 100%;
+//         max-width: 100%;
+//     }
+
+//     &-intro {
+//         h1 {
+//             color: $dark-blue;
+//             margin-bottom: 1rem;
+//             text-align: justify;
+//         }
+//         p {
+//             margin-bottom: 2rem;
+//         }
+//     }
+
+//     form {
+//         font-family: $accent-text;
+//         ul {
+//             display: flex;
+//             flex-flow: column;
+//         }
+//         li {
+//             display: flex;
+//             flex-flow: column;
+//             margin-bottom: 0.5rem;
+//         }
+//         label {
+//             font-size: 1.25rem;
+//             margin-bottom: 0.5rem;
+//         }
+//         input {
+//             font-family: $accent-text;
+//             font-size: 1.25rem;
+//             padding: 0.25rem;
+//             border: none;
+//             border-bottom: 1px solid $dark-blue;
+//             outline: none;
+//         }
+//         textarea {
+//             height: auto;
+//             border: none;
+//             border-bottom: 1px solid $dark-blue;
+//         }
+//     }
+
+//     .modal-submit-button {
+//         cursor: pointer;
+//         color: $accent-purp;
+//         border: 1px solid $dark-blue;
+//         margin-top: 2rem;
+//         &:hover {
+//             background: linear-gradient(120deg, #fff, $purp-gradient);
+//         }
+//     }
+//     textarea:focus,
+//     input:focus {
+//         outline: none;
+//     }
+//     &-close {
+//         position: absolute;
+//         top: 0;
+//         right: 25px;
+//         color: #aaaaaa;
+//         float: right;
+//         font-size: 2.25rem;
+//         font-weight: bold;
+//     }
+
+//     &-close:hover,
+//     &-close:focus {
+//         color: $dark-blue;
+//         text-decoration: none;
+//         cursor: pointer;
+//     }
+// }
